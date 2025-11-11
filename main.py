@@ -11,7 +11,12 @@ def analyze_text(text):
     list - 按字符频率降序排列的字符列表
     """
     # 在此处增加代码
-    
+   count = {} 
+   for c in text:
+       count[c] = count.get(c,0) + 1
+   count_1 = sorted(count.keys(),key = lambda x:count[x],reverse=True)
+   for i in count_1:
+       print(i)
 
 # 主程序，已完整
 if __name__ == "__main__":
